@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7FB0CC61C0019C300920CB6 /* GLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FB0CC51C0019C300920CB6 /* GLTools.h */; };
-		B7FB0CC81C0019C300920CB6 /* GLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CC71C0019C300920CB6 /* GLTools.m */; };
+		B7FB0CD41C0019DA00920CB6 /* GLBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CCE1C0019DA00920CB6 /* GLBatch.cpp */; };
+		B7FB0CD51C0019DA00920CB6 /* glew.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CCF1C0019DA00920CB6 /* glew.c */; };
+		B7FB0CD61C0019DA00920CB6 /* GLShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CD01C0019DA00920CB6 /* GLShaderManager.cpp */; };
+		B7FB0CD71C0019DA00920CB6 /* GLTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CD11C0019DA00920CB6 /* GLTools.cpp */; };
+		B7FB0CD81C0019DA00920CB6 /* GLTriangleBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CD21C0019DA00920CB6 /* GLTriangleBatch.cpp */; };
+		B7FB0CD91C0019DA00920CB6 /* math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0CD31C0019DA00920CB6 /* math3d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7FB0CC21C0019C200920CB6 /* libGLTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGLTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7FB0CC51C0019C300920CB6 /* GLTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTools.h; sourceTree = "<group>"; };
-		B7FB0CC71C0019C300920CB6 /* GLTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLTools.m; sourceTree = "<group>"; };
+		B7FB0CCE1C0019DA00920CB6 /* GLBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLBatch.cpp; path = src/GLBatch.cpp; sourceTree = "<group>"; };
+		B7FB0CCF1C0019DA00920CB6 /* glew.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glew.c; path = src/glew.c; sourceTree = "<group>"; };
+		B7FB0CD01C0019DA00920CB6 /* GLShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLShaderManager.cpp; path = src/GLShaderManager.cpp; sourceTree = "<group>"; };
+		B7FB0CD11C0019DA00920CB6 /* GLTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLTools.cpp; path = src/GLTools.cpp; sourceTree = "<group>"; };
+		B7FB0CD21C0019DA00920CB6 /* GLTriangleBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLTriangleBatch.cpp; path = src/GLTriangleBatch.cpp; sourceTree = "<group>"; };
+		B7FB0CD31C0019DA00920CB6 /* math3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = math3d.cpp; path = src/math3d.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +55,12 @@
 		B7FB0CC41C0019C300920CB6 /* GLTools */ = {
 			isa = PBXGroup;
 			children = (
-				B7FB0CC51C0019C300920CB6 /* GLTools.h */,
-				B7FB0CC71C0019C300920CB6 /* GLTools.m */,
+				B7FB0CCE1C0019DA00920CB6 /* GLBatch.cpp */,
+				B7FB0CCF1C0019DA00920CB6 /* glew.c */,
+				B7FB0CD01C0019DA00920CB6 /* GLShaderManager.cpp */,
+				B7FB0CD11C0019DA00920CB6 /* GLTools.cpp */,
+				B7FB0CD21C0019DA00920CB6 /* GLTriangleBatch.cpp */,
+				B7FB0CD31C0019DA00920CB6 /* math3d.cpp */,
 			);
 			path = GLTools;
 			sourceTree = "<group>";
@@ -60,7 +72,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FB0CC61C0019C300920CB6 /* GLTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +131,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FB0CC81C0019C300920CB6 /* GLTools.m in Sources */,
+				B7FB0CD71C0019DA00920CB6 /* GLTools.cpp in Sources */,
+				B7FB0CD81C0019DA00920CB6 /* GLTriangleBatch.cpp in Sources */,
+				B7FB0CD51C0019DA00920CB6 /* glew.c in Sources */,
+				B7FB0CD61C0019DA00920CB6 /* GLShaderManager.cpp in Sources */,
+				B7FB0CD91C0019DA00920CB6 /* math3d.cpp in Sources */,
+				B7FB0CD41C0019DA00920CB6 /* GLBatch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +226,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.cpp;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/GLTools/include",
+					"$(PROJECT_DIR)/GLTools/include/GL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -218,6 +239,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.cpp;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/GLTools/include",
+					"$(PROJECT_DIR)/GLTools/include/GL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
